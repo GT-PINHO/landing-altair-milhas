@@ -21,7 +21,7 @@ export function Offer() {
         <ul className="mt-14 grid gap-px overflow-hidden rounded-card border border-ivory-100/10 bg-ivory-100/10 sm:grid-cols-2">
           {offer.items.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.09} className="h-full bg-navy-800">
-              <li className="flex h-full gap-5 p-7 md:p-9">
+              <li className="flex h-full flex-col gap-4 p-7 sm:flex-row sm:gap-5 md:p-9">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/30 text-gold">
                   <Icon name={item.icon} className="h-5 w-5" />
                 </span>

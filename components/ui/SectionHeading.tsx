@@ -27,7 +27,7 @@ export function SectionHeading({
   return (
     <Reveal
       className={[
-        isCentered ? 'mx-auto max-w-measure text-center' : 'max-w-measure text-left',
+        isCentered ? 'max-w-measure text-left md:mx-auto md:text-center' : 'max-w-measure text-left',
         className,
       ].join(' ')}
     >

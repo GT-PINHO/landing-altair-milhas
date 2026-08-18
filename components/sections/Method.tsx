@@ -34,7 +34,7 @@ export function Method() {
                   <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-navy-800 text-gold shadow-inset">
                     <Icon name={item.icon} className="h-6 w-6" />
                   </span>
-                  <span className="relative z-10 font-serif text-3xl text-gold/45">{item.step}</span>
+                  <span className="relative z-10 font-serif text-3xl text-gold/70">{item.step}</span>
                 </div>
 
                 <h3 className="mt-7 text-display-sm text-ivory">{item.title}</h3>

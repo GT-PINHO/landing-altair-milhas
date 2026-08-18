@@ -44,8 +44,8 @@ export function SocialProof() {
                       className="h-14 w-14 shrink-0 !p-1 [&_span:last-child]:hidden"
                     />
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-semibold text-navy">{item.name}</p>
-                      <p className="mt-0.5 truncate text-xs text-navy-400">{item.role}</p>
+                      <p className="break-words text-sm font-semibold text-navy">{item.name}</p>
+                      <p className="mt-0.5 break-words text-xs text-navy-400">{item.role}</p>
                     </div>
                   </figcaption>
                 </figure>

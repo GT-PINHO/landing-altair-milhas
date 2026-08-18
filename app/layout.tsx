@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 
 import './globals.css'
 
+import { MobileCta } from '@/components/ui/MobileCta'
 import { site, siteUrl } from '@/lib/config'
 
 /**
@@ -95,6 +96,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </a>
 
         {children}
+
+        <MobileCta />
       </body>
     </html>
   )
