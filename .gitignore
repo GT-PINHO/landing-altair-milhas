@@ -34,3 +34,5 @@ Thumbs.db
 
 # pacotes de entrega (gerados sob demanda, nao versionar)
 entrega/*.zip
+.env*
+!.env.example
