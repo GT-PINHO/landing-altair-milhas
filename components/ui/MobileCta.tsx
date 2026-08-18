@@ -15,8 +15,9 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
  * WhatsApp sempre a um toque de distância no meio da leitura.
  *
  * Ela some nos dois extremos da página: enquanto o hero está visível (o CTA
- * principal já está ali) e quando a chamada final aparece (para não competir
- * com o botão daquela seção).
+ * principal já está ali) e da chamada final em diante, onde tanto aquela seção
+ * quanto o rodapé já oferecem o WhatsApp e a barra passaria a cobrir o aviso
+ * legal.
  */
 export function MobileCta() {
   const [visible, setVisible] = useState(false)
@@ -25,11 +26,12 @@ export function MobileCta() {
   useEffect(() => {
     const hero = document.getElementById(sectionIds.hero)
     const finalCta = document.getElementById(sectionIds.finalCta)
+    const footer = document.querySelector('footer')
     if (!hero || !finalCta) return
 
-    const state = { hero: true, final: false }
+    const state = { hero: true, final: false, footer: false }
 
-    const sync = () => setVisible(!state.hero && !state.final)
+    const sync = () => setVisible(!state.hero && !state.final && !state.footer)
 
     const heroObserver = new IntersectionObserver(
       ([entry]) => {
@@ -49,12 +51,20 @@ export function MobileCta() {
       { rootMargin: '0px 0px -20% 0px' },
     )
 
+    const footerObserver = new IntersectionObserver(([entry]) => {
+      if (!entry) return
+      state.footer = entry.isIntersecting
+      sync()
+    })
+
     heroObserver.observe(hero)
     finalObserver.observe(finalCta)
+    if (footer) footerObserver.observe(footer)
 
     return () => {
       heroObserver.disconnect()
       finalObserver.disconnect()
+      footerObserver.disconnect()
     }
   }, [])
 

@@ -6,6 +6,10 @@ import type { Config } from 'tailwindcss'
  * Tudo que for identidade visual mora aqui como token e e consumido por nome.
  */
 const config: Config = {
+  future: {
+    // Sem isso, no toque o estado de hover fica preso no elemento apos o tap.
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',

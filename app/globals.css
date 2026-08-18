@@ -45,6 +45,35 @@
     @apply bg-gold/30 text-navy-900;
   }
 
+  /*
+   * Superfícies desenhadas pelo navegador, não pelo layout.
+   * Sem isto a barra de rolagem entra com o cinza padrão do sistema e
+   * destoa da paleta em todo o resto da página.
+   */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gold.600') theme('colors.ivory.200');
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.ivory.200');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.gold.600');
+    border: 2px solid theme('colors.ivory.200');
+    border-radius: theme('borderRadius.pill');
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gold.700');
+  }
+
   /* Respeita usuarios com "reduzir movimento" ligado no sistema */
   @media (prefers-reduced-motion: reduce) {
     html {

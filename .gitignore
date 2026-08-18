@@ -36,3 +36,6 @@ Thumbs.db
 entrega/*.zip
 .env*
 !.env.example
+
+# skills de agente (ferramenta de desenvolvimento, nao faz parte do site)
+.agents/

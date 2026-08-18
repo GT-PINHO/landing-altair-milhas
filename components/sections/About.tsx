@@ -56,7 +56,7 @@ export function About() {
                     >
                       <path d="M5 12.5l4.2 4.2L19 7" />
                     </svg>
-                    <span className="text-[0.95rem] text-navy-700">{credential}</span>
+                    <span className="text-base text-navy-700">{credential}</span>
                   </li>
                 ))}
               </ul>

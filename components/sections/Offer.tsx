@@ -28,7 +28,7 @@ export function Offer() {
 
                 <div>
                   <h3 className="text-lg font-semibold leading-snug text-ivory">{item.title}</h3>
-                  <p className="mt-3 text-[0.95rem] leading-relaxed text-ivory-300/80">
+                  <p className="mt-3 text-base leading-relaxed text-ivory-300/80">
                     {item.body}
                   </p>
                 </div>

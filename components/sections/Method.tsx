@@ -39,7 +39,7 @@ export function Method() {
 
                 <h3 className="mt-7 text-display-sm text-ivory">{item.title}</h3>
 
-                <p className="mt-4 text-[0.975rem] leading-relaxed text-ivory-300/80">
+                <p className="mt-4 text-base leading-relaxed text-ivory-300/80">
                   {item.body}
                 </p>
               </li>

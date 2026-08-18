@@ -38,12 +38,13 @@ export function Footer() {
           <nav aria-label="Seções da página" className="md:col-span-3">
             <ColumnLabel>Navegar</ColumnLabel>
 
-            <ul className="mt-6 space-y-3.5 text-sm">
+            <ul className="mt-4 text-sm">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="inline-block transition-colors duration-300 hover:text-gold"
+                    /* min-h-[44px]: alvo de toque confortável no celular */
+                    className="flex min-h-[44px] items-center transition-colors duration-300 hover:text-gold"
                   >
                     {link.label}
                   </a>
@@ -108,13 +109,13 @@ export function Footer() {
             <p className="max-w-measure text-ivory-300/60">{site.legal}</p>
 
             <div className="flex shrink-0 items-center gap-6">
-              <p className="text-ivory-300/50">
+              <p className="text-ivory-300/65">
                 &copy; {year} {site.brand}
               </p>
 
               <a
                 href={`#${sectionIds.hero}`}
-                className="group inline-flex items-center gap-2 text-ivory-300/60 transition-colors duration-300 hover:text-gold"
+                className="group inline-flex min-h-[44px] items-center gap-2 text-ivory-300/60 transition-colors duration-300 hover:text-gold"
               >
                 <span>Voltar ao topo</span>
                 <svg

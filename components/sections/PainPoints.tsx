@@ -22,7 +22,7 @@ export function PainPoints() {
 
                 <h3 className="mt-6 text-display-sm">{card.title}</h3>
 
-                <p className="mt-4 text-[0.975rem] leading-relaxed text-navy-500">{card.body}</p>
+                <p className="mt-4 text-base leading-relaxed text-navy-500">{card.body}</p>
               </li>
             </Reveal>
           ))}

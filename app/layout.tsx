@@ -79,6 +79,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  // Necessário para que env(safe-area-inset-*) funcione em telas com notch.
+  viewportFit: 'cover',
   themeColor: '#0A2E4D',
   colorScheme: 'light',
 }
