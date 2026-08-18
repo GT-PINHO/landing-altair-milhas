@@ -40,3 +40,4 @@ entrega/*.zip
 # skills de agente (ferramenta de desenvolvimento, nao faz parte do site)
 .agents/
 .claude/skills/
+skills-lock.json
